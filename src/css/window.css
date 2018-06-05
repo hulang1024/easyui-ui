@@ -1,15 +1,8 @@
-.window-proxy-mask, .window-mask {
-  background: transparent;
-}
-
-.window, .window-shadow {
-  border-radius: 6px;
-}
-
 .window {
   padding: 0px;
   border-width: 0.5px;
   background: transparent;
+  border-radius: 6px;
   box-shadow:
     rgba(0, 0, 0, 0.2) 0px 7px 8px -4px,
     rgba(0, 0, 0, 0.14) 0px 13px 19px 2px,
@@ -101,4 +94,12 @@
 
 .window .dialog-button .l-btn>span>.l-btn-text {
   padding: 0px 0px 0px 0px;
+}
+
+.window-proxy-mask, .window-mask {
+  background: transparent;
+}
+
+.window-shadow {
+  display: none !important;
 }
