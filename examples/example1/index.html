@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Example 1</title>
+	<link rel="stylesheet" type="text/css" href="../libs/easyui/themes/material/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../src/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../src/css/cursor.css">
+	<link rel="stylesheet" type="text/css" href="../../src/css/window.css">
+	<link rel="stylesheet" type="text/css" href="../window-custom.css">
+
+</head>
+
+<body>
+  <p>
+    <h1>dialog</h1>
+    <button id="openDialog">打开一个dialog（对话框）</button>
+  </p>
+  <p>
+    <h1>messager</h1>
+    <button id="openMessager">打开一个消息窗口</button>
+    <button id="openMessageAlert">打开一个消息警告窗口</button>
+    <button id="openMessageConfirm">打开一个消息确认窗口</button>
+  </p>
+
+  
+  <script src="../libs/easyui/jquery.min.js"></script>
+  <script src="../libs/easyui/jquery.easyui.min.js"></script>
+  <script src="../libs/easyui/jquery.extend.js"></script>
+  <script src="../libs/easyui/locale/easyui-lang-zh_CN.js"></script>
+  <script src="../libs/easyui/locale/extend-lang-zh_CN.js"></script>
+
+  <script>
+  $('#openDialog').click(function() {
+    openEditDialog({
+      width: 300,
+      height: 200,
+      href: '',
+      onSave: function() {
+        alert('onSave');
+      }
+    });
+  });
+  
+  $('#openMessager').click(function() {
+    $.messager.show({
+        title: '提示',
+        msg: '操作成功',
+        timeout:3000,
+        showType:'slide'
+    });
+  });
+  
+  $('#openMessageAlert').click(function() {
+    $.messager.alert("提示", '警告信息...', "info");
+  });
+  
+  $('#openMessageConfirm').click(function() {
+     $.messager.confirm("确认", '消息');
+  });
+  
+  openEditDialog = (function(){
+    var dialogId = 1;
+    var getNewDialogId = function() {
+      return dialogId++;
+    }
+    return function(options) {
+      // 元素id
+      var id = 'dialog_' + (options.id || getNewDialogId());
+      
+      // 创建dom元素
+      if ($("#" +id).length == 0)
+        $("<div id=" + id + " style='position:relative;'></div>").appendTo(document.body);
+      var elem = $("#" + id);
+
+      // 计算合适的尺寸
+      if (options.heightFit) {
+        options.height = $(document).height();
+        delete options.fit;
+      }
+      if (options.widthFit) {
+        options.width = $(document).width();
+        delete options.fit;
+      }
+
+      options.href = '' + options.href;
+          
+      var dialog;
+      options = $.extend({
+        closed: false,
+        cache: false,
+        modal: false,
+        minimizable: true,
+        maximizable: true,
+        resizable: true,
+        shadow: false,
+        title: '编辑',
+        buttons:[{
+            text:"确定",
+            handler:function() {
+                options.onSave(dialog);
+            }
+        },{
+            text:"取消",
+            handler:function(){
+                dialog.dialog("destroy");    
+            }
+        }],
+        onClose: function() {
+            dialog.dialog('destroy');
+        }
+      }, options);
+      dialog = elem.dialog(options);
+
+      return dialog;
+    }
+  })();
+  </script>
+</body>
+</html>
