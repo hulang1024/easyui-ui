@@ -12,7 +12,7 @@ easyui-ui
 引入 window.css 覆盖easyui默认主题中window组件的css，
 并替换window.css中会用到的图片路径。并引入（或复制其中的源）window.js
 #### 用法
-[example1](examples/example1)
+[example1](https://hulang1024.github.io/easyui-ui/examples/example1/)
 
 
 ### 其它
