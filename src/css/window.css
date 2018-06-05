@@ -1,0 +1,104 @@
+.window-proxy-mask, .window-mask {
+  background: transparent;
+}
+
+.window, .window-shadow {
+  border-radius: 6px;
+}
+
+.window {
+  padding: 0px;
+  border-width: 0.5px;
+  background: transparent;
+  box-shadow:
+    rgba(0, 0, 0, 0.2) 0px 7px 8px -4px,
+    rgba(0, 0, 0, 0.14) 0px 13px 19px 2px,
+    rgba(0, 0, 0, 0.12) 0px 5px 24px 4px;
+}
+
+.window .window-header {
+  padding: 5px 0px 5px 0px;
+  background: rgb(250, 250, 250);
+}
+
+.window .window-header .panel-title {
+  text-align: center;
+}
+
+.window .window-header .panel-tool {
+  margin-top: -6px;
+  margin-right: 6px;
+}
+
+.window .window-header .panel-tool>a {
+  width: 14px;
+  height: 14px;
+  margin-left: 6px;
+  border-radius: 100%;
+}
+
+.window .window-header .panel-tool>.panel-tool-close {
+  background-color: rgb(252, 98, 93);
+  background-image: none;
+}
+
+.window .window-header .panel-tool>.panel-tool-close:hover {
+  background: url(../js/easyui/themes/gray/images/panel_tools.png)
+    no-repeat -16px 0px;
+  background-color: rgb(252, 98, 93);
+}
+
+.window .window-header .panel-tool>.panel-tool-min {
+  background-color: rgb(254, 188, 64);
+  background-image: none;
+}
+
+.window .window-header .panel-tool>.panel-tool-min:hover {
+  background: url(../js/easyui/themes/gray/images/panel_tools.png)
+    no-repeat 0px 0px;
+  background-color: rgb(254, 188, 64);
+}
+
+.window .window-header .panel-tool>.panel-tool-max {
+  background-color: rgb(53, 203, 75);
+  background-image: none;
+}
+
+.window .window-header .panel-tool>.panel-tool-max:hover {
+  background: url(../js/easyui/themes/gray/images/panel_tools.png)
+    no-repeat 0px -16px;
+  background-color: rgb(53, 203, 75);
+}
+
+.window .window-body {
+  padding: 2px 4px 0px 4px;
+  border-width: 0;
+}
+
+.window .dialog-button {
+  right: 3px;
+  border-width: 0;
+  background: #ffffff;
+}
+
+.window .dialog-button .l-btn {
+  margin-left: 10px;
+  box-shadow: none;
+  border: none;
+  border-radius: 6px 6px 6px 6px;
+  opacity: 1;
+}
+
+.window .dialog-button .l-btn:hover {
+  opacity: 0.8;
+}
+
+.window .dialog-button .l-btn>span {
+  width: 70px;
+  color: #fff;
+  background-color: rgb(103, 165, 240);
+}
+
+.window .dialog-button .l-btn>span>.l-btn-text {
+  padding: 0px 0px 0px 0px;
+}

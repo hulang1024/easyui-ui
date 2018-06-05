@@ -1,0 +1,8 @@
+.datagrid-cell .easyui-linkbutton>div:hover {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+.datagrid-cell>img {
+  margin-left: -4px;
+  vertical-align: middle;
+}

@@ -1,0 +1,20 @@
+.panel-body,
+.tabs li a:hover.tabs-close,
+.panel-tool-close,
+.tabs-p-tool a:hover,
+.easyui-linkbutton,
+.l-btn,
+.combo-arrow,
+.tabs .tabs-inner,
+.panel .panel-header,
+.tree-node,
+.panel-tool>a,
+.easyui-menu .menu-item,
+.tree .tree-node .tree-hit,
+.spinner-arrow>a,
+.calendar .calendar-day,
+.calendar .calendar-nav,
+.calendar .calendar-title>span,
+.datebox-button-a {
+  cursor: default;
+}
