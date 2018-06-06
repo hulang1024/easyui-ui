@@ -35,8 +35,7 @@
 }
 
 .window .window-header .panel-tool>.panel-tool-close:hover {
-  background: url(../js/easyui/themes/gray/images/panel_tools.png)
-    no-repeat -16px 0px;
+  background: url(../images/window_icon_close_over.png) no-repeat;
   background-color: rgb(252, 98, 93);
 }
 
@@ -46,8 +45,7 @@
 }
 
 .window .window-header .panel-tool>.panel-tool-min:hover {
-  background: url(../js/easyui/themes/gray/images/panel_tools.png)
-    no-repeat 0px 0px;
+  background: url(../images/window_icon_min_over.png) no-repeat;
   background-color: rgb(254, 188, 64);
 }
 
@@ -57,8 +55,7 @@
 }
 
 .window .window-header .panel-tool>.panel-tool-max:hover {
-  background: url(../js/easyui/themes/gray/images/panel_tools.png)
-    no-repeat 0px -16px;
+  background: url(../images/window_icon_max_over.png)no-repeat;
   background-color: rgb(53, 203, 75);
 }
 
